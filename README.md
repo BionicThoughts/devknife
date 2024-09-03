@@ -10,3 +10,5 @@ This template should help get you started developing with Tauri, React and Types
 https://tailgrids.com/components/accordions
 
 npm run tauri dev
+
+npm run tauri build

@@ -15,13 +15,29 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
       }
     },
     "windows": [
       {
-        "title": "devknife",
-        "width": 800,
-        "height": 600
+        "resizable": true,
+        "closable": true,
+        "hiddenTitle": true,
+        "height": 600,
+        "width": 1000,
+        "minWidth":800,
+        "title": "Devknife",
+        "titleBarStyle": "Overlay"
       }
     ],
     "security": {

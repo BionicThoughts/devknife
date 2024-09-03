@@ -82,13 +82,13 @@ export default function DatePicker({ onChange }: DatePickerProps) {
   };
 
   return (
-    <div className="mx-auto px-1 py-1 bg-natural text-primary-content">
+    <div className="mx-auto px-1 py-1  text-primary-content">
       <div className="w-[17rem] h-[17rem] ">
         <div className="relative">
           <AnimatePresence initial={false}>
             {(
               <motion.div
-                className="bg-neutral-800/70 mt-0 rounded shadow p-3 absolute top-0 left-0 w-full"
+                className="bg-neutral-900/60 mt-0 rounded shadow p-3 absolute top-0 left-0 w-full"
                 initial="collapsed"
                 animate="open"
                 exit="collapsed"
@@ -204,7 +204,7 @@ export default function DatePicker({ onChange }: DatePickerProps) {
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  {blankdays.map((day, index) => {
+                  {blankdays.map((_, index) => {
                     return (
                       <div className="px-1 mb-1" key={index}>
                         <div

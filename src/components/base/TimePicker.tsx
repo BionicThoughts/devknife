@@ -6,7 +6,7 @@ interface TimePickerProps {
 }
 
 const TimePicker: React.FC<TimePickerProps> = ({ inputTime, onChange }) => {
-
+  
   const [time, setTime] = useState<string>(inputTime);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;

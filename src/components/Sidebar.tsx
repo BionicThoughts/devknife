@@ -2,14 +2,15 @@ import React from "react";
 import BaseInput from "./base/BaseInput";
 import MenuItem from "./MenuItem";
 import SectionTitle from "./common/SectionTitle";
-import { Clock,Scale,Hash } from "lucide-react";
+import { Clock, Scale, Hash } from "lucide-react";
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="flex flex-col w-64 h-screen bg-base-200  shadow-lg">
+    <div className="flex flex-col w-64 h-screen bg-neutral-800/60 border-r-[1px] border-r-zinc-700">
+      <div className="main-titlebar w-100 h-[2rem]" data-tauri-drag-region></div>
       <div className="mb-4">
         <BaseInput
-          className="mx-1 mt-2  w-[15rem]"
+          className="mx-1  w-[15rem]"
           placeholder="Search... ⌘⇧S"
         />
       </div>
