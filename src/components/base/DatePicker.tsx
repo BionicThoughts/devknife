@@ -82,13 +82,13 @@ export default function DatePicker({ onChange }: DatePickerProps) {
   };
 
   return (
-    <div className="mx-auto px-1 py-1  text-primary-content">
+    <div className="mx-auto px-1 py-1  text-neutral-content">
       <div className="w-[17rem] h-[17rem] ">
         <div className="relative">
           <AnimatePresence initial={false}>
             {(
               <motion.div
-                className="bg-neutral-900/60 mt-0 rounded shadow p-3 absolute top-0 left-0 w-full"
+                className="bg-base-100 mt-0 rounded shadow p-3 absolute top-0 left-0 w-full"
                 initial="collapsed"
                 animate="open"
                 exit="collapsed"
@@ -234,7 +234,7 @@ export default function DatePicker({ onChange }: DatePickerProps) {
                           className={`${isToday(day)
                             ? "border border-neutral-400 "
                             : ""
-                            } ${isSelectedDate(day) ? "bg-primary" : "white"
+                            } ${isSelectedDate(day) ? "bg-primary text-primary-content" : "white"
                             } cursor-pointer text-center text-sm rounded-lg leading-loose w-7 hover:bg-neutral-700 transition ease-in-out`}
                         >
                           {day}

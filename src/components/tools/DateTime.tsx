@@ -102,7 +102,7 @@ const DateTime: React.FC = () => {
     return `${hour < 10 ? '0' : ''}${hour}:${minute < 10 ? '0' : ''}${minute}`;
   };
 
-  
+
   useEffect(() => {
     updateFields(currentTime)
   }, [currentTime]);
@@ -123,7 +123,7 @@ const DateTime: React.FC = () => {
             <TimePicker inputTime={getTimeString()} onChange={handleTimeChange} />
             <Button
               size="custom"
-              className="py-[.2rem] w-[6rem]"
+              className="py-[.2rem] w-[6rem] bg-primary"
               onClick={handleNowClick}
             >
               Now

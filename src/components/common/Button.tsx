@@ -23,12 +23,12 @@ const Button: React.FC<ButtonProps> = ({
   const variants = {
     primary: "bg-primary text-primary-content hover:bg-primary/80",
     secondary:
-      "bg-neutral text-primary-content/90 hover:bg-neutral/70 hover:text-primary-content",
+      "bg-base-100 text-primary-content/90 hover:bg-base-100/70 hover:text-primary-content",
     danger: "btn-error text-primary-content hover:bg-error/80",
   };
 
   const computedClassName = `
-    text-primary-content px-2 rounded-sm
+    px-2 rounded-sm
      ${sizes[size]} ${variants[variant]} ${className} 
     `
     .replace(/\s+/g, " ")

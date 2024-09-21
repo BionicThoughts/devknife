@@ -25,7 +25,7 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({ text }) => {
         size="sm"
         variant="secondary"
         onClick={handleCopyClick}
-        className="py-1"
+        className="bg-base-100 text-neutral-200 hover:text-neutral-content hover:bg-base-100/80"
       >
         {copied ? <Check size={16} /> : <ClipboardCopy size={16} />}
       </Button>

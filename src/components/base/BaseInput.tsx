@@ -25,7 +25,7 @@ const BaseInput: React.FC<BaseInputProps> = ({
   const id = useId();
 
   const styles = {
-    base: "input input-sm rounded-sm m-1 bg-neutral-900/60",
+    base: "input input-sm rounded-sm m-1 bg-base-100",
     state: {
       normal: "",
       error: "input-error",
