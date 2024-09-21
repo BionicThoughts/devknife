@@ -14,9 +14,9 @@ const Sidebar: React.FC = () => {
   // Sidebar menu items with their respective paths and icons
   const menuItems = [
     { label: "Date Time", path: "/datetime", icon: <Clock size={15} /> },
-    { label: "Number Base Converter", path: "/number_base_converter", icon: <Scale size={15} /> },
-    { label: "Hex Converter", path: "/hex_converter", icon: <Hash size={15} /> },
-    { label: "UUID Generator", path: "/uuid_generator", icon: <Hash size={15} /> },
+    { label: "Number Base", path: "/number_base", icon: <Scale size={15} /> },
+    { label: "Hash", path: "/hash", icon: <Hash size={15} /> },
+    { label: "UUID", path: "/uuid", icon: <Hash size={15} /> },
   ];
 
   return (
@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
 
       <SectionTitle className="mx-3 my-1">Converter</SectionTitle>
       <div className="flex flex-col space-y-1 mx-3">
-        {menuItems.slice(0, 3).map((item) => (
+        {menuItems.slice(0,2).map((item) => (
           <MenuItem key={item.path} selected={isSelected(item.path)} to_link={item.path}>
             {item.icon}
             <span className="ml-2">{item.label}</span>
@@ -43,7 +43,7 @@ const Sidebar: React.FC = () => {
 
       <SectionTitle className="mx-3 my-1">Generators</SectionTitle>
       <div className="flex flex-col space-y-1 mx-3">
-        {menuItems.slice(3).map((item) => (
+        {menuItems.slice(2).map((item) => (
           <MenuItem key={item.path} selected={isSelected(item.path)} to_link={item.path}>
             {item.icon}
             <span className="ml-2">{item.label}</span>

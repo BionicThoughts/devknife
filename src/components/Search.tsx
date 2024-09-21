@@ -8,9 +8,9 @@ interface Tool {
 
 const tools: Tool[] = [
   { label: "Date Time", path: "/datetime" },
-  { label: "Number Base Converter", path: "/number_base_converter" },
-  { label: "Hex Converter", path: "/hex_converter" },
-  { label: "UUID Generator", path: "/uuid_generator" },
+  { label: "Number Base", path: "/number_base" },
+  { label: "Hash", path: "/hash" },
+  { label: "UUID", path: "/uuid" },
 ];
 
 const Search: React.FC = () => {

@@ -4,13 +4,13 @@ import BaseInput from "../base/BaseInput";
 import Button from "../common/Button";
 
 import DatePicker from "../base/DatePicker";
-import TabSwitcher from "../common/TabsSwitcher";
+// import TabSwitcher from "../common/TabsSwitcher";
 import CopyToClipboard from "../common/CopyToClipboard";
 import { Clock } from "../base/Clock";
 import TimePicker from "../base/TimePicker";
 
 // Define a type for the time object
-const tabs = [{ id: "gmt", label: "GMT", }, { id: "local", label: "Local" }];
+// const tabs = [{ id: "gmt", label: "GMT", }, { id: "local", label: "Local" }];
 
 interface Time {
   hour: number;
@@ -24,7 +24,7 @@ const DateTime: React.FC = () => {
   const [currentTime, setCurrentTime] = useState<number>(current_time);
   const [timestampInput, setTimestampInput] = useState<number>(Math.floor(currentTime / 1000));
   const [currentHMS, setCurrentHMS] = useState(getCurrentTime(currentTime));
-  const [activeTab, setActiveTab] = useState<string>("local");
+  // const [activeTab, setActiveTab] = useState<string>("local");
 
   const dt = new Date(currentTime).toLocaleString();
   const isoTime = new Date(currentTime).toISOString();

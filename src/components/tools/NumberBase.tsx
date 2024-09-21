@@ -61,7 +61,7 @@ const NumberBaseConverter: React.FC = () => {
                 type="text"
                 value={binary}
                 onChange={handleBinaryChange}
-                className="mb-2 w-full"
+                className="mb-1 w-full"
                 placeholder="Enter Binary"
             />
             <SectionTitle>Ocatal</SectionTitle>
@@ -69,7 +69,7 @@ const NumberBaseConverter: React.FC = () => {
                 type="text"
                 value={octal}
                 onChange={handleOctalChange}
-                className="mb-2 w-full"
+                className="mb-1 w-full"
                 placeholder="Enter Octal"
             />
             <SectionTitle>Decimal</SectionTitle>
@@ -77,7 +77,7 @@ const NumberBaseConverter: React.FC = () => {
                 type="text"
                 value={decimal}
                 onChange={handleDecimalChange}
-                className="mb-2 w-full"
+                className="mb-1 w-full"
                 placeholder="Enter Decimal"
             />
             <SectionTitle>Hexadecimal</SectionTitle>
@@ -85,7 +85,7 @@ const NumberBaseConverter: React.FC = () => {
                 type="text"
                 value={hexadecimal}
                 onChange={handleHexadecimalChange}
-                className="mb-2 w-full"
+                className="mb-1 w-full"
                 placeholder="Enter Hexadecimal"
             />
         </div>
