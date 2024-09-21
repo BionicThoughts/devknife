@@ -31,7 +31,7 @@ const UuidGenerator: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-full overflow-scroll px-2 ">
+    <div className="w-full h-full overflow-scroll px-2">
       <SectionTitle>Configuration</SectionTitle>
       <div className="space my-2"></div>
       <ActionRow checked={excludeDashes} onChange={toggleExcludeDashes} >
@@ -41,26 +41,19 @@ const UuidGenerator: React.FC = () => {
       <ActionRow checked={upperCase} onChange={toggleUppercase} >
         Aa &nbsp; Uppercase
       </ActionRow>
-      {/* <h2 className="text-lg font-semibold mb-2">UUID Generator</h2>
-      <p className="mb-4">
-        <strong>Generated UUID: </strong>
-        <span className="font-mono">{uuid}</span>
-      </p> */}
-
       <div className="space my-5"></div>
       <div className="btn-row flex justify-between items-end">
         <SectionTitle>Result</SectionTitle>
         <div className="flex justify-between items-center">
-          <Button onClick={generateUuid} variant="primary" size="sm" className="mx-1 py-[.15rem]">
+          <Button onClick={generateUuid} variant="primary" size="sm" className="mx-1 py-[0.16rem]">
             Generate
           </Button>
           <CopyToClipboard text={uuid} />
         </div>
       </div>
       <div className="space my-2"></div>
-      <div className="resultbox bg-base-100 w-100 h-20 p-2 text-sm select-text cursor-text" >
-        {uuid}
-      </div>
+      <textarea className="textarea textarea-bordered rounded w-full" readOnly value={uuid} />
+
     </div>
   );
 };

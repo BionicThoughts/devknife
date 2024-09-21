@@ -10,6 +10,21 @@
       user-select: none;
       cursor: default;
     }
+    /* For WebKit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 0; /* Remove scrollbar width */
+      height: 0; /* Remove horizontal scrollbar */
+    }
+
+    /* For Firefox */
+    html {
+      scrollbar-width: none; /* Hide scrollbar */
+    }
+
+    /* For IE and Edge */
+    html {
+      -ms-overflow-style: none; /* Hide scrollbar */
+    }
   </style>
   <body>
     <div id="root"></div>

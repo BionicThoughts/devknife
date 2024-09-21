@@ -129,11 +129,11 @@ const DateTime: React.FC = () => {
               Now
             </Button>
           </div>
-          <TabSwitcher
+          {/* <TabSwitcher
             tabs={tabs}
             activeTabId={activeTab}
             onTabChange={setActiveTab}
-          />
+          /> */}
         </div>
       </div>
 

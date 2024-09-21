@@ -1,7 +1,7 @@
 import React from "react";
 import DateTime from "./tools/DateTime";
 import HexConverter from "./tools/HexConverter";
-import UnitConverter from "./tools/UnitConverter";
+import NumberBaseConverter from "./tools/NumberBaseConverter";
 import UUIDGenerator from "./tools/UUIDGenerator";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
@@ -14,8 +14,8 @@ const MainContent: React.FC = () => {
     switch (location.pathname) {
       case "/datetime":
         return "Date Time";
-      case "/unit_converter":
-        return "Unit Converter";
+      case "/number_base_converter":
+        return "Number Base Converter";
       case "/hex_converter":
         return "Hex Converter";
       case "/uuid_generator":
@@ -42,7 +42,7 @@ const MainContent: React.FC = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/datetime" />} />
           <Route path="datetime" element={<DateTime />} />
-          <Route path="unit_converter" element={<UnitConverter />} />
+          <Route path="number_base_converter" element={<NumberBaseConverter />} />
           <Route path="hex_converter" element={<HexConverter />} />
           <Route path="uuid_generator" element={<UUIDGenerator />} />
         </Routes>
