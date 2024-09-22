@@ -26,17 +26,17 @@ const MainContent: React.FC = () => {
   };
 
   // Optionally add bookmark logic here
-  const handleBookmark = () => {
-    console.log("Bookmark clicked!");
-    // Add your bookmark logic here
-  };
+  // const handleBookmark = () => {
+  //   console.log("Bookmark clicked!");
+  //   // Add your bookmark logic here
+  // };
 
 
   return (
     <div className="main-content  h-screen flex-1 bg-base-300">
       <div className="titlebar flex justify-between content-center px-4 mt-1 py-2 text-gray-300 text-xl font-semibold">
         <span>{getTitle()}</span>
-        <button onClick={handleBookmark}>☆</button>
+        {/* <button onClick={handleBookmark}>☆</button> */}
       </div>
       <div className="content py-3 px-6 h-[100%] overflow-scroll">
         <Routes>
