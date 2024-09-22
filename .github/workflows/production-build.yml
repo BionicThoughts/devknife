@@ -2,9 +2,8 @@ name: 'publish'
 
 on:
   push:
-    branches: [ "**" ]
-  pull_request:
-    branches: [ "master" ]
+    branches:
+      - release
 
 jobs:
   publish-tauri:
