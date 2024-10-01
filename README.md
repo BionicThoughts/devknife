@@ -13,7 +13,7 @@
 
 ## Features
 1.	Multi-tool Conversion & Generation: Tools like DateTime converter, Base Converter, Hex Converter, UUID Generator.
-2.	Available on Windows,Mac, Linux
+
 
 ### Available tools
 1. Date time converter
