@@ -50,7 +50,7 @@ const generateHash = (input: string, algorithm: string): string => {
 };
 
 const HashGenerator: React.FC = () => {
-    const [input, setInput] = useState("");
+    const [input, setInput] = useState("hello");
     const [algorithm, setAlgorithm] = useState("MD5");
     const [hash, setHash] = useState("");
 

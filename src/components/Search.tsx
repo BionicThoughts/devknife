@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CircleX } from "lucide-react";
 
 interface Tool {
   label: string;
@@ -23,7 +24,7 @@ const Search: React.FC = () => {
     setSearchInput(value);
 
     // Filter results only if input has more than 2 characters
-    if (value.length > 2) {
+    if (value.length >= 2) {
       const filtered = tools.filter(tool =>
         tool.label.toLowerCase().includes(value.toLowerCase())
       );
@@ -39,28 +40,43 @@ const Search: React.FC = () => {
     setFilteredTools([]);  // Clear filtered results
   };
 
+  const clearSearch = () => {
+    setSearchInput("");
+    setFilteredTools([]);
+  }
+
   return (
     <div className="relative">
       <input
         type="text"
-        className="input input-sm rounded bg-base-100 w-full"
+        className="input input-sm rounded bg-base-100 w-[14.7rem] mx-[.3rem]"
         placeholder="Search tools..."
         value={searchInput}
         onChange={handleInputChange}
       />
-
       {filteredTools.length > 0 && (
-        <ul className="absolute w-full bg-base-200 border border-gray-300 z-10 mt-1 rounded shadow-lg">
-          {filteredTools.map((tool) => (
-            <li
-              key={tool.path}
-              className="cursor-pointer px-3 py-2 hover:bg-base-300"
-              onClick={() => handleSelect(tool.path)}
-            >
-              {tool.label}
-            </li>
-          ))}
-        </ul>
+        <>
+          <button onClick={() => clearSearch()} className="absolute rounded-full top-[.15rem] right-1 clear-btn h-[1.7rem] w-[1.7rem] flex justify-center items-center text-gray-400 hover:text-gray-200">
+            <CircleX size={20} />
+          </button>
+          <ul className="absolute w-full h-auto min-h-[20rem] bg-base-100 py-1 px-2 p z-10 mt-1 rounded shadow-sm shadow-black">
+            <h6>
+              <small className="text-gray-400">
+                Match for ... <b className="text-gray-300">'{searchInput}'</b>
+              </small>
+            </h6>
+            <div className="space my-2"></div>
+            {filteredTools.map((tool) => (
+              <li
+                key={tool.path}
+                className="rounded cursor-pointer bg-base-200  px-2 py-1 hover:bg-base-300"
+                onClick={() => handleSelect(tool.path)}
+              >
+                {tool.label}
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </div>
   );
