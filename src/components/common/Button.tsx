@@ -22,8 +22,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const variants = {
     primary: "bg-primary text-primary-content hover:bg-primary/80",
-    secondary:
-      "bg-secondary text-primary-content hover:bg-secondary/80",
+    secondary: "bg-secondary text-primary-content hover:bg-secondary/80",
     danger: "btn-error text-primary-content hover:bg-error/80",
   };
 

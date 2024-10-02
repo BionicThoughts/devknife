@@ -25,7 +25,7 @@ const Search: React.FC = () => {
 
     // Filter results only if input has more than 2 characters
     if (value.length >= 2) {
-      const filtered = tools.filter(tool =>
+      const filtered = tools.filter((tool) =>
         tool.label.toLowerCase().includes(value.toLowerCase())
       );
       setFilteredTools(filtered);
@@ -35,15 +35,15 @@ const Search: React.FC = () => {
   };
 
   const handleSelect = (path: string) => {
-    navigate(path);  // Navigate to the selected tool's path
-    setSearchInput("");  // Clear the search input
-    setFilteredTools([]);  // Clear filtered results
+    navigate(path); // Navigate to the selected tool's path
+    setSearchInput(""); // Clear the search input
+    setFilteredTools([]); // Clear filtered results
   };
 
   const clearSearch = () => {
     setSearchInput("");
     setFilteredTools([]);
-  }
+  };
 
   return (
     <div className="relative">
@@ -56,7 +56,10 @@ const Search: React.FC = () => {
       />
       {filteredTools.length > 0 && (
         <>
-          <button onClick={() => clearSearch()} className="absolute rounded-full top-[.15rem] right-1 clear-btn h-[1.7rem] w-[1.7rem] flex justify-center items-center text-gray-400 hover:text-gray-200">
+          <button
+            onClick={() => clearSearch()}
+            className="absolute rounded-full top-[.15rem] right-1 clear-btn h-[1.7rem] w-[1.7rem] flex justify-center items-center text-gray-400 hover:text-gray-200"
+          >
             <CircleX size={20} />
           </button>
           <ul className="absolute w-full h-auto min-h-[20rem] bg-base-100 py-1 px-2 p z-10 mt-1 rounded shadow-sm shadow-black">

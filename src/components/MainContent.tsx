@@ -5,7 +5,6 @@ import NumberBase from "./tools/NumberBase";
 import UUID from "./tools/UUID";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
-
 const MainContent: React.FC = () => {
   const location = useLocation();
 
@@ -30,7 +29,6 @@ const MainContent: React.FC = () => {
   //   console.log("Bookmark clicked!");
   //   // Add your bookmark logic here
   // };
-
 
   return (
     <div className="main-content  h-screen flex-1 bg-base-300">

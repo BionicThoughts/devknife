@@ -21,7 +21,10 @@ const Sidebar: React.FC = () => {
 
   return (
     <div className="flex flex-col w-64 h-screen bg-base-200 border-r-[1px] border-r-zinc-700 min-w-[14rem]">
-      <div className="main-titlebar w-100 h-[2rem]" data-tauri-drag-region></div>
+      <div
+        className="main-titlebar w-100 h-[2rem]"
+        data-tauri-drag-region
+      ></div>
       {/* <div className="mb-4 mt-2">
         <BaseInput className="mx-[0.35rem]  w-[95%]" placeholder="Search... ⌘⇧S" />
       </div> */}
@@ -31,8 +34,12 @@ const Sidebar: React.FC = () => {
 
       <SectionTitle className="mx-3 my-1">Converter</SectionTitle>
       <div className="flex flex-col space-y-1 mx-3">
-        {menuItems.slice(0,2).map((item) => (
-          <MenuItem key={item.path} selected={isSelected(item.path)} to_link={item.path}>
+        {menuItems.slice(0, 2).map((item) => (
+          <MenuItem
+            key={item.path}
+            selected={isSelected(item.path)}
+            to_link={item.path}
+          >
             {item.icon}
             <span className="ml-2">{item.label}</span>
           </MenuItem>
@@ -44,7 +51,11 @@ const Sidebar: React.FC = () => {
       <SectionTitle className="mx-3 my-1">Generators</SectionTitle>
       <div className="flex flex-col space-y-1 mx-3">
         {menuItems.slice(2).map((item) => (
-          <MenuItem key={item.path} selected={isSelected(item.path)} to_link={item.path}>
+          <MenuItem
+            key={item.path}
+            selected={isSelected(item.path)}
+            to_link={item.path}
+          >
             {item.icon}
             <span className="ml-2">{item.label}</span>
           </MenuItem>

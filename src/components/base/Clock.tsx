@@ -24,7 +24,6 @@ export function Clock({ hour, minute, second }: ClockProps): JSX.Element {
 
   const angles = calculateClockAngles(hour, minute, second);
 
-
   return (
     <div className="relative flex items-center justify-end w-40 h-40 overflow-hidden rounded-full ring-gray-600 ring-1">
       {Array.from({ length: 12 }, (_, i) => (

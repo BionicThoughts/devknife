@@ -45,13 +45,13 @@ export default function DatePicker({ onChange }: DatePickerProps) {
   }, [month, year]);
 
   const onTodayClicked = () => {
-    const newDate = new Date()
+    const newDate = new Date();
     setMonth(newDate.getMonth());
     setYear(newDate.getFullYear());
-    const new_date = new Date(newDate)
-    onChange(new_date)
-    setFullDate(new_date)
-  }
+    const new_date = new Date(newDate);
+    onChange(new_date);
+    setFullDate(new_date);
+  };
 
   const isToday = (date: number) => {
     const today = new Date();
@@ -86,7 +86,7 @@ export default function DatePicker({ onChange }: DatePickerProps) {
       <div className="w-[17rem] h-[17rem] ">
         <div className="relative">
           <AnimatePresence initial={false}>
-            {(
+            {
               <motion.div
                 className="bg-base-100 mt-0 rounded shadow p-3 absolute top-0 left-0 w-full"
                 initial="collapsed"
@@ -211,7 +211,7 @@ export default function DatePicker({ onChange }: DatePickerProps) {
                           key={index}
                           className="cursor-pointer text-center text-sm rounded-lg leading-loose w-7 "
                         >
-                          { }
+                          {}
                         </div>
                       </div>
                     );
@@ -229,13 +229,14 @@ export default function DatePicker({ onChange }: DatePickerProps) {
                             setFullDate(selectedDate);
 
                             onChange(new Date(year, month, day));
-
                           }}
-                          className={`${isToday(day)
-                            ? "border border-neutral-400 "
-                            : ""
-                            } ${isSelectedDate(day) ? "bg-primary text-primary-content" : "white"
-                            } cursor-pointer text-center text-sm rounded-lg leading-loose w-7 hover:bg-neutral-700 transition ease-in-out`}
+                          className={`${
+                            isToday(day) ? "border border-neutral-400 " : ""
+                          } ${
+                            isSelectedDate(day)
+                              ? "bg-primary text-primary-content"
+                              : "white"
+                          } cursor-pointer text-center text-sm rounded-lg leading-loose w-7 hover:bg-neutral-700 transition ease-in-out`}
                         >
                           {day}
                         </button>
@@ -244,7 +245,7 @@ export default function DatePicker({ onChange }: DatePickerProps) {
                   })}
                 </motion.div>
               </motion.div>
-            )}
+            }
           </AnimatePresence>
         </div>
       </div>

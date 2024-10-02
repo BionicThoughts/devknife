@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 interface TimePickerProps {
-  inputTime: string
+  inputTime: string;
   onChange?: (value: string) => void;
 }
 
 const TimePicker: React.FC<TimePickerProps> = ({ inputTime, onChange }) => {
-  
   const [time, setTime] = useState<string>(inputTime);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -17,9 +16,8 @@ const TimePicker: React.FC<TimePickerProps> = ({ inputTime, onChange }) => {
   };
 
   useEffect(() => {
-    setTime(inputTime)
+    setTime(inputTime);
   }, [inputTime]);
-
 
   return (
     <input

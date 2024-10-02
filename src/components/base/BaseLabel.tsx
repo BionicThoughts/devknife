@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface BaseLabelProps {
   id: string;
@@ -6,7 +6,11 @@ interface BaseLabelProps {
   children: React.ReactNode;
 }
 
-const BaseLabel: React.FC<BaseLabelProps> = ({ id, className = '', children }) => {
+const BaseLabel: React.FC<BaseLabelProps> = ({
+  id,
+  className = "",
+  children,
+}) => {
   return (
     <label
       className={`block mb-2 text-base font-medium text-gray-700 ${className}`}

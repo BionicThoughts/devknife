@@ -21,7 +21,11 @@ const MenuItem: React.FC<MenuItemProps> = ({
     ${selected ? selectionStyle : ""}
     ${className}
   `;
-  return <Link to={to_link} className={computedClassName.trim()}>{children}</Link>;
+  return (
+    <Link to={to_link} className={computedClassName.trim()}>
+      {children}
+    </Link>
+  );
 };
 
 export default MenuItem;
